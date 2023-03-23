@@ -4,13 +4,14 @@ import Counter from "../components/Counter";
 import * as CounterActions from '../actions/CounterActions';
 import { CounterState } from "../reducers";
 import { connect } from "react-redux";
+import { PropsWithChildren } from "react";
 
 interface Props {
     counter: number,
     dispatch: Dispatch<CounterAction>
 }
 
-const CounterApp = (props: Props) => {
+const CounterApp = (props: PropsWithChildren<Props>) => {
     const { counter, dispatch } = props;
 
     return (

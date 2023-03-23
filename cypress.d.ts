@@ -8,6 +8,8 @@ declare global {
   namespace Cypress {
     interface Chainable {
       mount: typeof mount;
+      getAction: (action: string) => Chainable
+      getState: (state: string) => Chainable;
     }
   }
 }
